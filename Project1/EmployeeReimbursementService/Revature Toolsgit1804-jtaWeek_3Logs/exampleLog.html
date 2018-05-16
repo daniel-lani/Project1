@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Example</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri May 04 11:06:52 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:29</td>
+<td title="Message">IO Error: The Network Adapter could not establish the connection</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 8 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.ConnectException: Connection timed out: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 13 more
+</td></tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:30</td>
+<td title="Message">08006</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 8 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.ConnectException: Connection timed out: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 13 more
+</td></tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:31</td>
+<td title="Message">17002</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 8 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.ConnectException: Connection timed out: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 13 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Example</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri May 04 11:11:44 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:29</td>
+<td title="Message">ORA-01017: invalid username/password; logon denied
+</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:938)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:480)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:825)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:596)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+</td></tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:30</td>
+<td title="Message">72000</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:938)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:480)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:825)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:596)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+</td></tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:31</td>
+<td title="Message">1017</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:938)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:480)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:825)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:596)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Example</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Fri May 04 11:15:00 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:29</td>
+<td title="Message">ORA-01017: invalid username/password; logon denied
+</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:938)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:480)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:825)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:596)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+</td></tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:30</td>
+<td title="Message">72000</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:938)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:480)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:825)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:596)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+</td></tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:31</td>
+<td title="Message">1017</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:938)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:480)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:416)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:825)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:596)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Example</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Sat May 05 10:36:52 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:29</td>
+<td title="Message">IO Error: The Network Adapter could not establish the connection</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 8 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.ConnectException: Connection timed out: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 13 more
+</td></tr>
+
+<tr>
+<td>62</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:30</td>
+<td title="Message">08006</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 8 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.ConnectException: Connection timed out: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 13 more
+</td></tr>
+
+<tr>
+<td>62</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.connection.ConnectionUtil category">com.revature.connection.ConnectionUtil</td>
+<td>ConnectionUtil.java:31</td>
+<td title="Message">17002</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.PhysicalConnection.&lt;init&gt;(PhysicalConnection.java:715)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.&lt;init&gt;(T4CConnection.java:385)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.sql.DriverManager.getConnection(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.getConnection(ConnectionUtil.java:27)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.connection.ConnectionUtil.main(ConnectionUtil.java:41)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 8 more
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.net.ConnectException: Connection timed out: connect
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.PlainSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.SocksSocketImpl.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at java.net.Socket.connect(Unknown Source)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	... 13 more
+</td></tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HTML Layout Example</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue May 08 16:12:30 EDT 2018<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.dao.EmployeeDaoImpl category">com.revature.dao.EmployeeDaoImpl</td>
+<td>ManagerDaoImpl.java:79</td>
+<td title="Message">Invalid column name</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: Invalid column name
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.ManagerDaoImpl.getManager(ManagerDaoImpl.java:76)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.ManagerService.getManager(ManagerService.java:20)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.ers.application.main(application.java:8)
+</td></tr>
+
+<tr>
+<td>20</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.dao.EmployeeDaoImpl category">com.revature.dao.EmployeeDaoImpl</td>
+<td>ManagerDaoImpl.java:80</td>
+<td title="Message">99999</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: Invalid column name
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.ManagerDaoImpl.getManager(ManagerDaoImpl.java:76)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.ManagerService.getManager(ManagerService.java:20)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.ers.application.main(application.java:8)
+</td></tr>
+
+<tr>
+<td>20</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.revature.dao.EmployeeDaoImpl category">com.revature.dao.EmployeeDaoImpl</td>
+<td>ManagerDaoImpl.java:81</td>
+<td title="Message">17006</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : xx-small;" colspan="6">java.sql.SQLException: Invalid column name
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.ManagerDaoImpl.getManager(ManagerDaoImpl.java:76)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.dao.ManagerService.getManager(ManagerService.java:20)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at com.revature.ers.application.main(application.java:8)
+</td></tr>
